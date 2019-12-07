@@ -1,0 +1,29 @@
+nav {
+  color: dimgrey;
+}
+
+nav a:hover {
+  color: firebrick;
+}
+
+nav a:active {
+  color: firebrick;
+}
+
+nav a:target {
+  color: firebrick;
+}
+
+h1 {
+  color: darkslategray;
+  font-family: 'MedievalSharp', cursive;
+}
+
+#skills img {
+  width: 50%;
+}
+
+#about img {
+  width: 50%;
+}
+/*# sourceMappingURL=style.css.map */
