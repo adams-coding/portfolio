@@ -10,40 +10,39 @@
     <link href="https://fonts.googleapis.com/css?family=MedievalSharp&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <nav>
-        <span><a href="#home">Home</a></span>
-        <span><a href="#about">About Me</a></span>
-        <span><a href="#skills">Skills</a></span>
-        <span><a href="#portfolio">Portfolio</a></span>
-        <span><a href="#blog">Blog</a></span>
+<body >
+    <div id="container">
+    <nav id="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About&nbspMe</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#blog">Blog</a></li>
     </nav>
-    <div id="home">
-        <h1>Portfolio</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia debitis sequi iure incidunt veniam nulla, sint, aliquam nemo quas maiores neque? Odit, ullam officia illo quisquam reprehenderit ut commodi soluta?
-
-        </p>
-    </div>
-
     <div id="about">
-            <h1>About me</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae maiores vitae recusandae explicabo corporis deserunt consectetur laborum excepturi distinctio aperiam pariatur dolore minus, sint consequatur, rerum asperiores odit, incidunt laboriosam?
-        </p>
-        <img src="media/skill-placeholder.png" alt="graph of skills" />
-    </div>
+        
+            <iframe src="about.html" onload="this.before(this.contentDocument.children[0]);this.remove()"></iframe>
+            
+            
+        </div>
+
     
     <div id="skills">
-            <h1>Skills</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa maxime amet voluptas dolore labore suscipit non consectetur recusandae esse sit beatae, fugiat veritatis. Rerum porro exercitationem id vitae at sit!   
-        </p>
-        <img src="media/skill-placeholder.png" alt="graph of skills" />
+            <iframe src="skills.html" onload="this.before(this.contentDocument.children[0]);this.remove()"></iframe>
+            
     </div>
 
+    <div id="portfolio">
+        
+        <iframe src="portfolio.html" onload="this.before(this.contentDocument.children[0]);this.remove()"></iframe>
+        
+        
+    </div>
     <div id="blog">
             <h1>What I'm doing right now</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae maiores vitae recusandae explicabo corporis deserunt consectetur laborum excepturi distinctio aperiam pariatur dolore minus, sint consequatur, rerum asperiores odit, incidunt laboriosam?
             </p>
         </div>
-    
+    </div>
 </body>
 </html>

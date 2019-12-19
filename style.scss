@@ -1,0 +1,463 @@
+.container {
+    display: grid;
+    position: absolute;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 300px 3fr;
+    gap: 20px;
+    grid-template-areas: 
+        "nav "
+        "about " 
+        "portfolio" 
+        "skills"
+        "footer";
+}
+body {
+    min-height: calc(100vh - 20px);
+    width: 100%;
+    position: relative;
+    margin:0px;
+}
+
+nav {
+    display: flex;
+    list-style: none;
+    margin: 0; 
+    background: deepskyblue;
+    flex-flow: row wrap;
+    justify-content: center;
+    grid-area: nav;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    left: -10px;
+    width:100%;
+    padding: 0px;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #B35C05;
+    animation: 2s ease-out 0s 1 slideLeft;
+    
+}
+nav a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    
+    padding: 0.5rem;
+    background: deepskyblue;
+    position: relative;
+    
+       
+        // &:focus {
+        //     background: darken(deepskyblue, 20%);
+            
+            
+        // }
+        // &:active {
+        //     color: rgb(10, 241, 191);
+        // }
+        // &:target {
+        //     color: rgb(10, 241, 191);
+        // }
+    
+}
+nav a:before {
+    content:'';
+    position: absolute;
+    background: #000;
+    transition: 0.5s;
+    transition-delay: 0.4s;
+    left: 50%;
+    top: 2%;
+    z-index: 15;
+    width: 5%;
+    height: 5%;
+}
+
+nav a:after {
+    content:'';
+    position: absolute;
+    background: rgb(255, 255, 255);
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    left: 49%;
+    bottom: 3%;
+    z-index: 15;
+    width: 10%;
+    height: 5%;
+}
+nav a:hover:before {
+    left:0%;
+    width: 100%;
+    height: 90%;
+    z-index: 15;
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: 0.2s;
+}
+nav a:hover:after {
+    left:-1%;
+    width: 100%;
+    height: 90%;
+    z-index: 14;
+    background: rgba(245,245,245,0.35);
+    border-radius: 10px;
+    border: 2px solid rgb(250, 249, 249);
+    transition: 0.2s;
+}
+
+nav li {
+    list-style: none;
+    font-size: larger;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    
+    
+}
+nav a:visited{
+    
+        color: floralwhite;
+    }
+
+h1 {
+    color: darkslategray;
+    font-family: 'MedievalSharp', cursive;
+}
+#about {
+    grid-area: about;
+    display: flex;  
+    content: '';
+    width: 100%;
+    min-height: 80vh;
+    position: relative;
+    background: rgba(243, 149, 56, 0.7) 
+                url(/media/coder-bg.jpg);
+    background-blend-mode: overlay;
+    background-size: cover;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-flow: column wrap;
+}
+.about-card {
+    border: 3px solid white;
+    border-radius: 15px;
+    max-width: 80vw;
+    max-height: 70vh;
+    position: absolute;
+    left: 5%;
+    top: 1vh;
+    padding: 1em 10em 1em 10em;
+    background: black;
+    animation: 1.0s ease-in 0s 1 slideRight;
+    &:hover{
+        z-index: 5;
+    }
+}
+@keyframes slideLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+.about-card h1 {
+    position: absolute;
+    top: 5px;
+    background: rgba(245,245,245,1);
+    border-radius: 5px;
+    padding: 30px;
+    transform: skewX(-25deg);
+
+}
+
+.about-card p {
+    position: absolute;
+    bottom: 10%;
+    color: #3AD2FF;
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+
+
+
+.about-info {
+    justify-content: flex-start;  
+    content: '';
+    width: 80vh;
+    min-height: 80vh;
+    position: relative;
+    flex: 1 1 auto;
+}
+
+#about img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    background-blend-mode: overlay;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+}
+
+#skills {
+    background-color:#3AD2FF;
+    grid-area: skills;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-flow: column wrap;
+}
+#skills img {
+    width: 50%;   
+}
+.bar{
+    height: 30px;
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    line-height: 30px;
+    font-size: 16px;
+    color: white;
+    padding: 0 0 0 10px;
+    position: relative;
+  }
+  .bar::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 30px;
+    top: 0;
+    z-index: -2;
+    background: #ecf0f1;
+  }
+  .bar::after{
+    content: '';
+    background: #2ecc71;
+    height: 30px;
+    transition: 0.7s;
+    display: block;
+    width: 100%;
+    animation: bar-before 1 1.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+    
+
+    
+  .bar1::after{
+    max-width: 60%;
+  }
+  .graph-cont{
+    width: calc(100% - 40px);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  h1,h2,h3{
+    text-align: center;
+    color: #34495e;
+  }
+  .bar{
+    height: 30px;
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    line-height: 30px;
+    font-size: 16px;
+    color: white;
+    padding: 0 0 0 10px;
+    position: relative;
+  }
+  .bar::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 30px;
+    top: 0;
+    z-index: -2;
+    background: #ecf0f1;
+  }
+  .bar::after{
+    content: '';
+    background: #2ecc71;
+    height: 30px;
+    transition: 1.2s;
+    display: block;
+    width: 100%;
+    animation: bar-before 1 1.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .bar1::after{
+    max-width: 80%;
+  }
+  .bar2::after{
+    max-width: 72%;
+  }
+  .bar3::after{
+    max-width: 79%;
+  }
+  .bar4::after{
+    max-width: 20%;
+  }
+  @keyframes bar-before{
+    0%{
+      width: 0px;
+    }
+    100%{
+      width: 100%;
+    }
+  }
+  
+   
+
+#portfolio { 
+    grid-area: portfolio;
+    background-color:#000;
+    display: flex;
+    align-content: space-around;
+    flex-basis: auto;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    padding: 1em;
+}
+
+#portfolio p { 
+    color:#fff;
+}
+#footer { 
+    grid-area: footer;
+}
+
+
+//portfolio page
+.poolside {
+    border: 3px solid white;
+    border-radius: 15px;
+    display:flex;
+    max-width: 100vh;
+    max-height: 100vh;
+    position: relative;
+    left: 400px;
+    top: 0px;
+    padding: 1em;
+    background: black;
+    margin: 1em;
+    justify-content: space-evenly;
+    flex-direction: column;
+    &:hover{
+        z-index: 5;
+    }
+} 
+
+.poolside p {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    justify-content: center;
+    margin-left: 10%;
+}
+
+.pool {
+     
+    align-self: center;
+    overflow: hidden;
+    display:flex;
+    position: relative;
+    filter: brightness(200%);
+    width: 80%;
+    justify-content: space-evenly;  
+}
+
+.text {
+    background-color: black;
+    color: white;
+    font-size: 6vmax;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    padding: 1em;
+    
+  text-shadow: -0.01em -0.01em 0.03em #fff,
+                0.01em 0.01em 0.03em #fff,
+  -0.01em 0.01em 0.03em #fff,
+  0.01em -0.01em 0.03em #fff;
+}
+
+.text::before {
+    position: absolute;
+    color: white;
+    filter: blur(0.09em);
+    mix-blend-mode: multiply;
+}
+
+.gradient {
+    position: absolute;
+    background: linear-gradient(70deg, blue, aqua, blue, darkgreen, aqua, blue);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: multiply;
+}
+
+.ripple {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    translate: rotate(-45deg);
+    background: 
+        radial-gradient(
+            circle,
+            white,
+         
+            transparent 25%
+        ) center / 25% 15%,
+        radial-gradient(
+            circle,
+            white,
+          lightgrey,
+            black 25%
+        ) center / 15% 35%;
+    animation: light 6s linear infinite;
+    mix-blend-mode: color-dodge;
+}
+
+
+@keyframes light {
+    to {
+        transform: translate(50%, 50%);
+    }
+}
+
+#blog {
+    grid-area: blog;
+}
