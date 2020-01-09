@@ -777,10 +777,6 @@ h3 {
   background-size: cover;
 }
 
-.blog li:nth-child(1) {
-  background-image: url(media/yowii-website-screen.jpg);
-}
-
 .blog a {
   position: relative;
   display: block;
