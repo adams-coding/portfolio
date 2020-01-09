@@ -12,14 +12,27 @@
 </head>
 <body >
     <div id="container">
-    <nav id="nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About&nbspMe</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#blog">Blog</a></li>
-    </nav>
-    <div id="about">
+        <div id="home">
+
+        </div>
+            <nav id="nav">
+                <li class="hide"><a href="#home">Home</a></li>
+                <li class="hide"><a href="#about">About&nbspMe</a></li>
+                <li class="hide"><a href="#skills">Skills</a></li>
+                <li class="hide"><a href="#portfolio">Portfolio</a></li>
+                <li class="hide"><a href="#blog">Blog</a></li>
+                
+                </nav>
+                
+                <div class="nav-small">
+                        <span class="icon"><a href="#home"> <img src="media/home-solid.svg" /></a></span>
+                        <span class="icon"><a href="#about"> <img src="media/address-card-solid.svg" /></a></span>
+                        <span class="icon"><a href="#skills"> <img src="media/laptop-code-solid.svg" /></a></span>
+                        <span class="icon"><a href="#portfolio"> <img src="media/photo-video-solid.svg" /></a></span>
+                        <span class="icon"><a href="#blog"> <img src="media/newspaper-solid.svg" /></a></span>
+                </div>
+        
+        <div id="about-section">
         
             <iframe src="about.html" onload="this.before(this.contentDocument.children[0]);this.remove()"></iframe>
             
@@ -27,21 +40,35 @@
         </div>
 
     
-    <div id="skills">
+        <div id="skills">
             <iframe src="skills.html" onload="this.before(this.contentDocument.children[0]);this.remove()"></iframe>
             
-    </div>
+        </div>
 
-    <div id="portfolio">
+        <div id="portfolio">
         
-        <iframe src="portfolio.html" onload="this.before(this.contentDocument.children[0]);this.remove()"></iframe>
+            <iframe src="portfolio.html" onload="this.before(this.contentDocument.children[0]);this.remove()"></iframe>
         
-        
-    </div>
-    <div id="blog">
+        </div>
+
+        <div id="blog-section">
             <h1>What I'm doing right now</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae maiores vitae recusandae explicabo corporis deserunt consectetur laborum excepturi distinctio aperiam pariatur dolore minus, sint consequatur, rerum asperiores odit, incidunt laboriosam?
-            </p>
+            <br>
+            <div class="blog"></div>
+            <ol>
+                    
+                    <li>
+                            <a href="" target="_blank">
+                              <div class="info">
+                                <h3>Course at coder Academy</h3>
+                                <p>Currently studying to complete a course at coder academy.
+                                </p>
+                              </div>    
+                            </a>
+                          </li>
+            
+             </ol>
+            </div>
         </div>
     </div>
 </body>
