@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio
 [Portfolio Website Online](https://adams-coding.github.io/portfolio/)
 
 [Github Repository for portfolio](https://github.com/adams-coding/portfolio)
@@ -74,20 +74,45 @@ The footer is a match for the nav bar at the top of the page to complete the ove
 It includes links for social pages and email contact.
 
 
+### Wireframes
+
+The following are wireframes designed for mobile and desktop.
+
+ - Mobile
+The focus with mobile was a simple design that is more about showing information than adding effects.
+
+![alt text](media/wireframe-mobile.png "Mobile wireframe")
 
 
+While i didn't follow the wireframe to the letter it game me a starting base to work from.
 
+
+- Desktop
+
+The desktop wireframe was much more detailed, including a complete mockup of all pages.
+I made substantial changes to the details of the site, but the overall layout was fairly similar to the one originally envisioned.
+
+![alt text](media/desktop-wireframe.jpg "desktop wireframe")
+
+### The Website
+
+Below are screenshots of the website itself. The design has changed since these images were taken.
+
+- Desktop
 
 ![alt text](media/screenshot1.jpg "desktop view")
 
+- Mobile
 ![alt text](media/screenshot2.jpg "mobile view")
+
+- Tablet
 
 ![alt text](media/screenshot3.jpg "tablet view")
 
-Target audience is prospective employers.
-The site was built using html5 and css in vscode, uploaded and deployed to github.
 
-## Sitemap
+
+
+### Sitemap
 As part of the design process i created a visual sitemap similar to a software development plan for a clearer understanding of the layout and interaction of the site. The website will present as a single page layout, but to fulfil the requirements of at least four html documents, each page will be called into the index as an iframe, then the iframe removed prior to display to prevent issues such as scrolling windows within the page.
 The seperate html documents that are called into the main page are: 
 - about.html
@@ -105,3 +130,6 @@ You can find them here:
 
  - [XML SITEMAP](https://github.com/adams-coding/portfolio/sitemap.xml)
 
+### Tech stack
+
+The site was built using html5 and css in vscode, uploaded and deployed to github.

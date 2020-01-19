@@ -188,7 +188,7 @@ h1 {
   width: 100%;
   min-height: 80vh;
   position: relative;
-  background: rgba(243, 149, 56, 0.7) url(media/coder-bg.jpg);
+  background: rgba(243, 149, 56, 0.7) url(media/background-small.jpg);
   background-blend-mode: overlay;
   background-size: cover;
   -webkit-box-pack: space-evenly;
@@ -928,7 +928,7 @@ h3 {
 }
 
 .blog li:nth-child(1) {
-  background-color: black;
+  background-image: url(media/visual-sitemap.jpg);
 }
 
 .blog li:nth-child(2) {
@@ -936,7 +936,7 @@ h3 {
 }
 
 .blog li:nth-child(3) {
-  background-image: url(media/mirai-AR-demo.jpg);
+  background-image: url(media/background-small.jpg);
 }
 
 .blog a {
