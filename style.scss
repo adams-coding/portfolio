@@ -37,7 +37,7 @@ body {
     border-bottom: 2px solid #000;
     border-top: 2px solid rgb(213, 228, 10);
     animation: 3s ease-out 0s 1 navSlideLeft;
-    overflow:hidden;
+    
     
   }
   nav a {
@@ -49,7 +49,6 @@ body {
     padding: 0.5rem;
     background: deepskyblue;
     position: relative;
-    overflow:hidden;
 
   }
   /* add lines in the form of background colors in preparation for transition on hover */
@@ -64,7 +63,6 @@ body {
     z-index: 15;
     width: 5%;
     height: 5%;
-    overflow:hidden;
   }
 
   nav a:after {
@@ -78,7 +76,6 @@ body {
     z-index: 15;
     width: 10%;
     height: 5%;
-    overflow:hidden;
   }
 
   /* Expand background for hover animation/transition to look like pressed button */
@@ -91,7 +88,6 @@ body {
     border-radius: 10px;
     border-top: 2px solid black;
     transition: 0.2s;
-    overflow:hidden;
   }
   nav a:hover:after {
     left:-1%;
@@ -102,7 +98,6 @@ body {
     border-radius: 10px;
     border-bottom: 2px solid rgb(250, 249, 249);
     transition: 0.2s;
-    overflow:hidden;
   }
 
   nav li {
@@ -212,11 +207,11 @@ h1 {
 .about-card h1 {
     position: absolute;
     top: 5px;
+    left: 20px;
     background: rgba(245,245,245,1);
     border-radius: 5px;
     padding: 30px;
     transform: skewX(-25deg);
-
 }
 
 .about-card p {
@@ -258,12 +253,14 @@ h1 {
     transition: transform 1s;
     transform-style: preserve-3d;
     overflow:hidden;
+    
      
 }
 .about-info h1:hover {
   transform:skewX(25deg);
   transition: transform 1.5s;
   background-color: rgb(233, 224, 96);
+  
   
 }
 
@@ -302,6 +299,9 @@ h1 {
 #skills img {
     width: 50%;   
 }
+#skills p {
+  color: white;
+}
 
   .graph-cont{
     width: calc(100% - 2em);
@@ -311,7 +311,7 @@ h1 {
   }
   h3{
     text-align: center;
-    color: #34495e;
+    color: #99aec2;
   }
   .bar{
     height: 30px;
@@ -614,24 +614,17 @@ h1 {
     .about-card p {
       position: absolute;
       bottom: 10%;
-      color: #3AD2FF;
-      font-size: 0.5em;
-      padding: 3rem;
-      background-color: rgb(238, 239, 245);
-      margin: 15px;
-      max-width: 60vh;
+      font-size: 1em;
+      
       
     }
 
     .about-card img {
-    width: 40vw;
-    height: 40vw;
-    object-fit: cover;
     background-blend-mode: overlay;
     border-radius: 50%;
     position: absolute;
-    right: 20%;
-    top: 25%;
+    right: 10%;
+    top: 15%;
 
     }
     
@@ -751,6 +744,10 @@ h1 {
     .blog li {
         height: 400px;
     }
+
+    .blog h1 {
+      left: 4%;
+    }
   }
   
   /* Viewport >= 620px */
@@ -840,4 +837,18 @@ h1 {
 .footer a:hover {
   text-shadow: 1px 0px 8px floralwhite, 1px 0px 8px floralwhite;
   transition: 0.2s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  .footer {
+    flex-flow: column;
+    margin: 30px;
+  }
+
+  .footer a {
+    flex-flow: column;
+    position: relative;
+    font-size: 1rem;
+    display:inherit;
+    left: 30%;
+  }
 }

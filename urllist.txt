@@ -1,0 +1,5 @@
+https://adams-coding.github.io/portfolio/
+https://adams-coding.github.io/portfolio/about.html
+https://adams-coding.github.io/portfolio/skills.html
+https://adams-coding.github.io/portfolio/portfolio.html
+https://adams-coding.github.io/portfolio/blog.html
