@@ -288,6 +288,7 @@ h1 {
 .about-card h1 {
   position: absolute;
   top: 5px;
+  left: 20px;
   background: whitesmoke;
   border-radius: 5px;
   padding: 30px;
@@ -412,6 +413,10 @@ h1 {
   width: 50%;
 }
 
+#skills p {
+  color: white;
+}
+
 .graph-cont {
   width: calc(100% - 2em);
   max-width: 800px;
@@ -420,7 +425,7 @@ h1 {
 
 h3 {
   text-align: center;
-  color: #34495e;
+  color: #99aec2;
 }
 
 .bar {
